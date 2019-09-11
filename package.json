@@ -1,0 +1,23 @@
+{
+  "name": "assistant-relay",
+  "version": "1.0.0",
+  "description": "A HTTP relay for Google Assistant commands",
+  "private": true,
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krconv/assistant-relay.git"
+  },
+  "author": "Kodey Converse",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/krconv/assistant-relay/issues"
+  },
+  "homepage": "https://github.com/krconv/assistant-relay#readme",
+  "dependencies": {
+    "google-assistant": "^0.6.0"
+  }
+}
