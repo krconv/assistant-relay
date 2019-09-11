@@ -24,3 +24,7 @@ yarn-error.log*
 
 # vscode
 /.vscode
+
+# secrets
+key.json
+tokens.json

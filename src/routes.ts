@@ -1,11 +1,21 @@
 import { Router } from "express";
 
-import * as auth from './auth';
+import * as auth from "./auth";
 
 const routes = Router();
 
 routes.use(auth.authenticate);
 
-routes.use((req, res) => res.send("Hello World!"));
+routes.post("/command", async ({ assistant, body }, res) => {
+  const text = body.text;
+
+  try {
+    const response = await assistant.send(text);
+
+    return res.send({ response });
+  } catch (error) {
+    res.sendStatus(500);
+  }
+});
 
 export default routes;
